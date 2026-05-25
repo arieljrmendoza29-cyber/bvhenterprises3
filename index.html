@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0A1628">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>BVH Enterprises LLC – Managed IT & Technology Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo" onclick="showPage('home')">
+    <svg width="100" height="40" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#0A1628">B</text>
+      <text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#1B4FD8">V</text>
+      <text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#0A1628">H</text>
+      <text x="2" y="58" font-family="Arial,sans-serif" font-size="12" fill="#0A1628" letter-spacing="3">Enterprises</text>
+    </svg>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a onclick="showPage('home',this)">Home</a>
+    <a onclick="showPage('managed',this)">Managed Services</a>
+    <a onclick="showPage('why',this)">Why BVH</a>
+    <a onclick="showPage('advantage',this)">Our Advantage</a>
+    <a onclick="showPage('about',this)">About</a>
+    <a onclick="showPage('contact',this)" class="nav-cta">Contact Us</a>
+  </div>
+  <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ════════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/video/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag">Your Strategic IT Partner</div>
+        <h1>Managed IT Services <em>Built Around</em> Your Business</h1>
+        <p class="hero-sub">BVH Enterprises delivers enterprise-grade technology consulting, managed IT, and cybersecurity solutions that drive growth, reduce risk, and keep your team productive 24/7.</p>
+        <div class="hero-btns">
+          <a class="btn-primary" onclick="showPage('contact')">📅 Book a Strategy Session</a>
+          <a class="btn-outline-white" onclick="showPage('managed')">Our Clients Said It Best →</a>
+        </div>
+        <div class="hero-explore">Explore how BVH transforms IT into a growth engine</div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <img src="assets/images/business-professionals.jpg" alt="BVH IT Consulting Team">
+          <div class="hero-img-badge">
+            <div class="hib-icon">🏆</div>
+            <div class="hib-text">
+              <strong>500+ Businesses Served</strong>
+              <span>Nationwide IT Partner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS STRIP -->
+  <div class="hero-stats-strip" style="background:var(--navy)">
+    <div class="hss-inner">
+      <div class="hss-item"><div class="hss-num count-up">99.9%</div><div class="hss-label">Uptime SLA</div></div>
+      <div class="hss-item"><div class="hss-num count-up">&lt;15 min</div><div class="hss-label">Avg Response Time</div></div>
+      <div class="hss-item"><div class="hss-num count-up">97%</div><div class="hss-label">Client Retention</div></div>
+      <div class="hss-item"><div class="hss-num count-up">24/7</div><div class="hss-label">Expert Support</div></div>
+    </div>
+  </div>
+
+  <!-- TRUSTED -->
+  <div class="trusted-bar">
+    <div class="trusted-inner">
+      <span class="trusted-label">Technology Partners</span>
+      <div class="trusted-logos">
+        <span class="tl">Microsoft</span>
+        <span class="tl">Cisco</span>
+        <span class="tl">AWS</span>
+        <span class="tl">Fortinet</span>
+        <span class="tl">VMware</span>
+        <span class="tl">SentinelOne</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRADIENT TEXT BAND -->
+  <div class="gradient-band">
+    <div class="gradient-band-inner">
+      <p>BVH Enterprises is your <span>strategic IT partner</span>, delivering managed IT services that <span>power business growth</span> with the local support you expect, backed by national expertise, <span>proactive security</span>, and responsive service to keep your organization productive and <span>future-ready</span>.</p>
+    </div>
+  </div>
+
+  <!-- STACKED CONTENT CARDS (hexagon + feature list) -->
+  <div class="stacked-sec">
+    <div class="stacked-inner">
+      <div class="hexagon-wrap">
+        <div class="hexagon-img">
+          <img src="assets/images/team-colleagues-tablet.jpg" alt="BVH Team Consulting">
+        </div>
+      </div>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="fi-icon">🤝</div>
+          <div>
+            <div class="fi-title">Everything You Need, All in One IT Partner</div>
+            <div class="fi-desc">From day-to-day IT management to forward-looking technology strategy, BVH covers the full spectrum of your IT needs — 24/7 support, proactive cybersecurity, cloud solutions, and strategic consulting including AI implementation.</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="fi-icon">🎧</div>
+          <div>
+            <div class="fi-title">Always-On Support, Backed by People Who Know You</div>
+            <div class="fi-desc">A dedicated local team of technicians who know your business, backed by a national network that never sleeps. Your issues are seen — and solved — right away, whether you're across town or across time zones.</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="fi-icon">📊</div>
+          <div>
+            <div class="fi-title">Transparency and Communication You Can Count On</div>
+            <div class="fi-desc">Every ticket, device, and response time is visible through our client portal. You'll always know who's working on your issue, how it's progressing, and when it's resolved.</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="fi-icon">🛡️</div>
+          <div>
+            <div class="fi-title">Security and Compliance, Built In from Day One</div>
+            <div class="fi-desc">Our layered security framework — 24/7 monitoring, MFA enforcement, and vCISO-level expertise — keeps your organization secure and audit-ready for HIPAA, SOC 2, CMMC, and more.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REAL RESULTS -->
+  <div class="results-sec">
+    <div class="results-bg"></div>
+    <div class="results-inner">
+      <div class="results-left">
+        <span class="results-label">Proven Performance</span>
+        <div class="results-title">Real Results.<br>Proven Performance.</div>
+        <p class="results-sub">From faster response times to stronger security, BVH delivers the results that matter most. Every promise we make is backed by real data and proven outcomes.</p>
+        <div class="results-stats">
+          <div class="rs-card"><div class="rs-num count-up">97%</div><div class="rs-label">Client Satisfaction</div></div>
+          <div class="rs-card"><div class="rs-num count-up">80%</div><div class="rs-label">First Call Resolution</div></div>
+          <div class="rs-card"><div class="rs-num count-up">500+</div><div class="rs-label">Clients Served</div></div>
+          <div class="rs-card"><div class="rs-num count-up">10+ yrs</div><div class="rs-label">Avg Engineer Experience</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFIED EXPERTS SLIDER -->
+  <div class="experts-sec">
+    <div class="experts-inner">
+      <div class="experts-header">
+        <span class="section-label">Our Expertise</span>
+        <h2 class="section-title">Certified Experts with<br>Specialized Skills to <em>Support Your Growth</em></h2>
+        <p class="section-sub">Our team brings the right mix of technical depth, certifications, and strategic experience to solve today's IT challenges and prepare you for what's next.</p>
+      </div>
+      <div class="slider-wrap">
+        <div class="slider-track" id="expertTrack">
+          <div class="expert-card"><div class="ec-icon">🪟</div><div class="ec-title">Microsoft Certified Experts</div><div class="ec-desc">Our Microsoft Certified Experts specialize in Cloud, M365, Teams, and Azure to optimize and secure your Microsoft environment.</div></div>
+          <div class="expert-card"><div class="ec-icon">🍎</div><div class="ec-title">Apple Certified Specialists</div><div class="ec-desc">Seamless Mac and iOS management, robust deployment and comprehensive end-user support across your entire organization.</div></div>
+          <div class="expert-card"><div class="ec-icon">🔐</div><div class="ec-title">Cybersecurity Professionals</div><div class="ec-desc">CISSPs and 24/7 SOC analysts delivering continuous monitoring and protection against all forms of evolving cyber threats.</div></div>
+          <div class="expert-card"><div class="ec-icon">📋</div><div class="ec-title">vCISOs & Compliance Team</div><div class="ec-desc">Executive-level guidance ensuring your business adheres to complex regulatory standards like CMMC, HIPAA, and SOC 2.</div></div>
+          <div class="expert-card"><div class="ec-icon">☁️</div><div class="ec-title">Cloud Architects</div><div class="ec-desc">Certified Cloud Architects (AWS, Azure, VMware) driving secure, efficient cloud adoption and optimization across your infrastructure.</div></div>
+          <div class="expert-card"><div class="ec-icon">🤖</div><div class="ec-title">AI & Digital Transformation</div><div class="ec-desc">Identify and unlock AI opportunities to future-proof your business and gain a competitive edge through intelligent automation.</div></div>
+          <div class="expert-card"><div class="ec-icon">🌐</div><div class="ec-title">Network & Infrastructure</div><div class="ec-desc">Cisco and Fortinet experts ensuring your core network delivers reliable performance, security, and maximum uptime.</div></div>
+          <div class="expert-card"><div class="ec-icon">📈</div><div class="ec-title">Strategic IT Leadership (vCIOs)</div><div class="ec-desc">Executive guidance that aligns your technology strategy with long-term business goals for sustainable growth.</div></div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" onclick="slideExperts(-1)">‹</button>
+        <button class="slider-btn" onclick="slideExperts(1)">›</button>
+        <div class="slider-dots" id="expertDots"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDUSTRY KNOWLEDGE SLIDER -->
+  <div class="industry-sec">
+    <div class="industry-overlay"></div>
+    <div class="industry-inner">
+      <div class="ind-header">
+        <span class="section-label" style="color:var(--accent)">Industries We Serve</span>
+        <h2 class="section-title" style="color:white">Industry Knowledge That<br>Solves Real Problems</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,.6)">We support many types of organizations, with deep expertise in several key industries.</p>
+      </div>
+      <div class="ind-track-wrap">
+        <div class="ind-track" id="indTrack">
+          <div class="ind-card"><div class="ind-icon">🏛️</div><div class="ind-title">Government Contractors</div><div class="ind-desc">Ensure full CMMC and NIST compliance with secure, scalable IT and strategic guidance for winning government contracts.</div><div class="ind-link">Explore More →</div></div>
+          <div class="ind-card"><div class="ind-icon">🤲</div><div class="ind-title">Nonprofits & Associations</div><div class="ind-desc">Efficient, mission-aligned IT solutions to maximize your impact, streamline operations, and enhance security for member and donor data.</div><div class="ind-link">Explore More →</div></div>
+          <div class="ind-card"><div class="ind-icon">⚖️</div><div class="ind-title">Law Firms & Legal Services</div><div class="ind-desc">Strengthen client confidentiality and compliance with secure IT infrastructure enabling seamless operations and data management.</div><div class="ind-link">Explore More →</div></div>
+          <div class="ind-card"><div class="ind-icon">💰</div><div class="ind-title">Financial Services</div><div class="ind-desc">Proactive cybersecurity and regulatory compliance (SEC/FINRA) to safeguard sensitive client data and maximize operational uptime.</div><div class="ind-link">Explore More →</div></div>
+          <div class="ind-card"><div class="ind-icon">🏥</div><div class="ind-title">Healthcare Organizations</div><div class="ind-desc">Seamless HIPAA-compliant IT support, protecting patient data and optimizing systems to enhance efficiency and clinical outcomes.</div><div class="ind-link">Explore More →</div></div>
+          <div class="ind-card"><div class="ind-icon">🏭</div><div class="ind-title">Manufacturing & Industrial</div><div class="ind-desc">Robust IT solutions to maximize production uptime, achieve industrial compliance, and enhance operational efficiency and security.</div><div class="ind-link">Explore More →</div></div>
+          <div class="ind-card"><div class="ind-icon">🦷</div><div class="ind-title">Dental Offices & Practices</div><div class="ind-desc">Specialized IT support for practice management software and imaging, ensuring HIPAA compliance and scalable growth.</div><div class="ind-link">Explore More →</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ind-controls">
+      <div class="ind-dots" id="indDots"></div>
+      <button class="slider-btn" style="border-color:rgba(255,255,255,.3);background:transparent;color:white" onclick="slideInd(-1)">‹</button>
+      <button class="slider-btn" style="border-color:rgba(255,255,255,.3);background:transparent;color:white" onclick="slideInd(1)">›</button>
+    </div>
+  </div>
+
+  <!-- SCHEDULE CONSULTATION -->
+  <div class="consult-sec">
+    <div class="consult-bg-glow"></div>
+    <div class="consult-inner">
+      <h2 class="section-title" style="color:white;font-size:clamp(36px,5vw,60px);margin-bottom:16px">Schedule a <span style="color:var(--accent)">Risk-Free</span> Consultation</h2>
+      <p class="consult-sub">What IT challenges are holding your business back? Let's find a solution that supports your long-term growth.</p>
+      <div class="consult-cards">
+        <div class="cc-card">
+          <div class="cc-hexicon">💡</div>
+          <div class="cc-title">Need Solutions?</div>
+          <div class="cc-desc">Talk to our team and we'll help you determine the best IT solution tailored to your business needs and budget.</div>
+          <a class="btn-outline-light" onclick="showPage('contact')">📞 Book a Free Call</a>
+        </div>
+        <div class="cc-card">
+          <div class="cc-hexicon">⚙️</div>
+          <div class="cc-title">Proactive & Agile Approach</div>
+          <div class="cc-desc">Our tailored approach and flexible pricing mean you only pay for what you need, when you need it — no surprise costs.</div>
+          <a class="btn-outline-light" onclick="showPage('managed')">View Our Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS — Carousel -->
+  <div class="testi-sec">
+    <div class="testi-inner">
+      <span class="section-label">Client Success</span>
+      <h2 class="section-title">Our Clients <em>Said It Best</em></h2>
+
+      <div class="testi-carousel" id="testiCarousel">
+        <button class="testi-arrow testi-prev" id="testiPrev" aria-label="Previous testimonial">‹</button>
+
+        <div class="testi-viewport" id="testiViewport">
+          <div class="testi-track" id="testiTrack">
+
+            <div class="tc">
+              <div class="tc-stars">★★★★★</div>
+              <p class="tc-quote">"BVH Enterprises transformed our IT infrastructure. Their proactive approach eliminated the constant firefighting we experienced with our previous provider. Response times are exceptional."</p>
+              <div class="tc-author">
+                <div class="tc-avatar"><img src="assets/images/testimonials/ava-reynolds.jpg" alt="Ava Reynolds" loading="lazy"></div>
+                <div><div class="tc-name">Ava Reynolds</div><div class="tc-role">COO, Reynolds Capital Group</div></div>
+              </div>
+            </div>
+
+            <div class="tc">
+              <div class="tc-stars">★★★★★</div>
+              <p class="tc-quote">"After three failed MSP relationships, BVH finally delivered what they promised. Their vCIO became an extension of our leadership team and helped us cut IT spend by 22% while improving uptime."</p>
+              <div class="tc-author">
+                <div class="tc-avatar"><img src="assets/images/testimonials/marcus-chen.jpg" alt="Marcus Chen" loading="lazy"></div>
+                <div><div class="tc-name">Marcus Chen</div><div class="tc-role">VP Operations, Sterling Logistics</div></div>
+              </div>
+            </div>
+
+            <div class="tc">
+              <div class="tc-stars">★★★★★</div>
+              <p class="tc-quote">"Switching to BVH was the best IT decision we've made. Their cybersecurity expertise helped us pass our first SOC 2 audit with zero findings. Truly a strategic partner."</p>
+              <div class="tc-author">
+                <div class="tc-avatar"><img src="assets/images/testimonials/catherine-weiss.jpg" alt="Catherine Weiss" loading="lazy"></div>
+                <div><div class="tc-name">Catherine Weiss</div><div class="tc-role">CFO, Meridian Financial</div></div>
+              </div>
+            </div>
+
+            <div class="tc">
+              <div class="tc-stars">★★★★★</div>
+              <p class="tc-quote">"The team at BVH doesn't just fix problems — they anticipate them. Our uptime has been consistently above 99.9% and the staff love the responsive helpdesk support."</p>
+              <div class="tc-author">
+                <div class="tc-avatar"><img src="assets/images/testimonials/david-okafor.jpg" alt="David Okafor" loading="lazy"></div>
+                <div><div class="tc-name">David Okafor</div><div class="tc-role">CEO, Okafor &amp; Associates</div></div>
+              </div>
+            </div>
+
+            <div class="tc">
+              <div class="tc-stars">★★★★★</div>
+              <p class="tc-quote">"BVH stood up our cloud environment, secured our endpoints, and trained our staff — all in under 90 days. Their engineers genuinely care about our success."</p>
+              <div class="tc-author">
+                <div class="tc-avatar"><img src="assets/images/testimonials/james-harrington.jpg" alt="James Harrington" loading="lazy"></div>
+                <div><div class="tc-name">James Harrington</div><div class="tc-role">President, Harrington Manufacturing</div></div>
+              </div>
+            </div>
+
+            <div class="tc">
+              <div class="tc-stars">★★★★★</div>
+              <p class="tc-quote">"As a fast-growing firm, we needed an IT partner who could scale with us. BVH's strategic guidance has been invaluable — and their helpdesk response is genuinely under 15 minutes every time."</p>
+              <div class="tc-author">
+                <div class="tc-avatar"><img src="assets/images/testimonials/sophia-marchetti.jpg" alt="Sophia Marchetti" loading="lazy"></div>
+                <div><div class="tc-name">Sophia Marchetti</div><div class="tc-role">Managing Director, Marchetti &amp; Co.</div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="testi-arrow testi-next" id="testiNext" aria-label="Next testimonial">›</button>
+
+        <div class="testi-dots" id="testiDots" role="tablist" aria-label="Testimonial navigation"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="cta-inner">
+      <h2>Ready to Transform Your IT?</h2>
+      <p>Join 500+ businesses that trust BVH Enterprises as their strategic technology partner. Book a free IT Strategy Session today.</p>
+      <a class="btn-white" onclick="showPage('contact')">Book a Free Strategy Session →</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner delivering managed services, cybersecurity, and cloud solutions that power business growth.</p></div>
+      <div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT Services</a><a onclick="showPage('managed')">Cybersecurity</a><a onclick="showPage('managed')">Cloud Solutions</a><a onclick="showPage('managed')">IT Consulting</a><a onclick="showPage('managed')">AI & Automation</a></div>
+      <div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About Us</a><a onclick="showPage('why')">Why BVH</a><a onclick="showPage('advantage')">Our Advantage</a><a onclick="showPage('contact')">Contact</a></div>
+      <div class="footer-col"><h4>Contact</h4><a>📞 (800) BVH-TECH</a><a>✉️ info@bvhenterprises.com</a><a>📍 United States</a><a>🕐 24/7 Support</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span><span>Privacy Policy · Terms of Service</span></div>
+  </footer>
+</div>
+
+<!-- ════ MANAGED SERVICES PAGE ════ -->
+<div class="page" id="page-managed">
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=80')">
+    <div class="page-hero-inner">
+      <span class="section-label" style="color:var(--accent)">Managed Services</span>
+      <h1>Complete IT Management,<br>Delivered 24/7</h1>
+      <p>From helpdesk support to enterprise-grade cybersecurity, BVH Enterprises manages every layer of your technology stack so you can focus on growing your business.</p>
+    </div>
+  </div>
+  <section style="background:var(--white)">
+    <div class="container">
+      <div class="ms-grid">
+        <div class="ms-card"><div class="ms-icon">🖥️</div><div><div class="ms-title">Managed Helpdesk & Support</div><div class="ms-desc">Fast, friendly support when your team needs it — resolved, not just escalated.</div><div class="ms-bullets"><div class="ms-bullet">24/7/365 helpdesk availability</div><div class="ms-bullet">Dedicated account technicians</div><div class="ms-bullet">Remote & on-site support</div><div class="ms-bullet">Guaranteed SLA response times</div></div></div></div>
+        <div class="ms-card"><div class="ms-icon">🔒</div><div><div class="ms-title">Cybersecurity & SOC</div><div class="ms-desc">Layered protection from endpoint to cloud, backed by a 24/7 Security Operations Center.</div><div class="ms-bullets"><div class="ms-bullet">24/7 threat monitoring & SOC</div><div class="ms-bullet">Endpoint detection & response</div><div class="ms-bullet">MFA & Zero Trust architecture</div><div class="ms-bullet">Phishing simulation & training</div></div></div></div>
+        <div class="ms-card"><div class="ms-icon">☁️</div><div><div class="ms-title">Cloud & Microsoft 365</div><div class="ms-desc">Certified cloud architects design and optimize your environment across AWS, Azure, and Microsoft 365.</div><div class="ms-bullets"><div class="ms-bullet">Microsoft 365 & Teams management</div><div class="ms-bullet">Azure & AWS migrations</div><div class="ms-bullet">Cloud cost optimization</div><div class="ms-bullet">Backup & disaster recovery</div></div></div></div>
+        <div class="ms-card"><div class="ms-icon">📊</div><div><div class="ms-title">IT Strategy (vCIO)</div><div class="ms-desc">A dedicated virtual CIO aligns your technology roadmap with business goals and manages vendor relationships.</div><div class="ms-bullets"><div class="ms-bullet">Technology roadmap planning</div><div class="ms-bullet">IT budget management</div><div class="ms-bullet">Vendor negotiation & oversight</div><div class="ms-bullet">Quarterly business reviews</div></div></div></div>
+        <div class="ms-card"><div class="ms-icon">📋</div><div><div class="ms-title">Compliance Management</div><div class="ms-desc">Navigate complex regulations with confidence. Our team maintains audit-readiness year-round.</div><div class="ms-bullets"><div class="ms-bullet">HIPAA, SOC 2, CMMC, FINRA</div><div class="ms-bullet">Policy & procedure development</div><div class="ms-bullet">Risk assessments</div><div class="ms-bullet">Audit preparation & support</div></div></div></div>
+        <div class="ms-card"><div class="ms-icon">🤖</div><div><div class="ms-title">AI & Digital Transformation</div><div class="ms-desc">Identify and implement automation opportunities that reduce manual work and give you a competitive edge.</div><div class="ms-bullets"><div class="ms-bullet">AI readiness assessments</div><div class="ms-bullet">Workflow automation</div><div class="ms-bullet">Copilot & AI tool deployment</div><div class="ms-bullet">Custom integration development</div></div></div></div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner"><div class="cta-inner"><h2>Ready to Get Started?</h2><p>Let's build a customized IT plan tailored to your industry and business goals.</p><a class="btn-white" onclick="showPage('contact')">Schedule a Free Consultation →</a></div></div>
+  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a><a onclick="showPage('managed')">Cloud Solutions</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About</a><a onclick="showPage('why')">Why BVH</a><a onclick="showPage('contact')">Contact</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (800) BVH-TECH</a><a>✉️ info@bvhenterprises.com</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+</div>
+
+<!-- ════ WHY BVH PAGE ════ -->
+<div class="page" id="page-why">
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80')">
+    <div class="page-hero-inner">
+      <span class="section-label" style="color:var(--accent)">Why BVH Enterprises</span>
+      <h1>A Partner That Thinks<br>Like a Business Owner</h1>
+      <p>We don't just fix technology — we align it with your goals, anticipate your challenges, and deliver measurable outcomes that matter to your bottom line.</p>
+    </div>
+  </div>
+  <section style="background:var(--white)">
+    <div class="container">
+      <div class="why-grid">
+        <div>
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">Built Different <em>By Design</em></h2>
+          <p class="section-sub">Most IT companies react to problems. BVH prevents them. Here's what makes us the partner businesses choose for the long term.</p>
+          <div class="why-list">
+            <div class="why-item"><div class="why-num">01</div><div><div class="why-item-title">Proactive, Not Reactive</div><div class="why-item-desc">We monitor and maintain your systems around the clock to prevent issues before they impact your business.</div></div></div>
+            <div class="why-item"><div class="why-num">02</div><div><div class="why-item-title">People Who Know Your Business</div><div class="why-item-desc">A dedicated team assigned to your account learns your environment, your team, and your goals — no starting from scratch each call.</div></div></div>
+            <div class="why-item"><div class="why-num">03</div><div><div class="why-item-title">Full Transparency Always</div><div class="why-item-desc">Real-time dashboards, open ticketing, and clear SLA reporting mean you always know the status of every issue and device.</div></div></div>
+            <div class="why-item"><div class="why-num">04</div><div><div class="why-item-title">Scalable as You Grow</div><div class="why-item-desc">From 10 employees to 1,000, our services scale with your business without disruption or service gaps.</div></div></div>
+          </div>
+        </div>
+        <div class="why-visual">
+          <div class="wm"><div class="wm-num count-up">99.9%</div><div class="wm-label">Average Client Uptime SLA</div></div>
+          <div class="wm"><div class="wm-num count-up">&lt;15 min</div><div class="wm-label">Average Initial Response Time</div></div>
+          <div class="wm"><div class="wm-num count-up">97%</div><div class="wm-label">Client Retention Rate</div></div>
+          <div class="wm"><div class="wm-num count-up">500+</div><div class="wm-label">Businesses Empowered Nationwide</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner"><div class="cta-inner"><h2>See the BVH Difference</h2><p>Book a complimentary IT assessment and discover what's holding your technology back.</p><a class="btn-white" onclick="showPage('contact')">Get My Free IT Assessment →</a></div></div>
+  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About</a><a onclick="showPage('contact')">Contact</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (800) BVH-TECH</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+</div>
+
+<!-- ════ OUR ADVANTAGE PAGE ════ -->
+<div class="page" id="page-advantage">
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')">
+    <div class="page-hero-inner">
+      <span class="section-label" style="color:var(--accent)">Our Advantage</span>
+      <h1>The BVH Edge — Where<br>Technology Meets Strategy</h1>
+      <p>Our unique combination of certified expertise, cutting-edge tools, and a client-first philosophy creates an IT experience unlike any other.</p>
+    </div>
+  </div>
+  <section style="background:var(--gray-50)">
+    <div class="container">
+      <span class="section-label">What Sets Us Apart</span>
+      <h2 class="section-title">Eight Reasons Businesses <em>Choose BVH</em></h2>
+      <div class="adv-grid">
+        <div class="adv-card"><span class="adv-icon">🏆</span><div class="adv-title">Certified Expertise</div><div class="adv-desc">Microsoft Gold, AWS, Cisco, and CompTIA certifications across our entire technical team.</div></div>
+        <div class="adv-card"><span class="adv-icon">⚡</span><div class="adv-title">Lightning Response</div><div class="adv-desc">Under 15-minute average initial response — because your time and business continuity matter.</div></div>
+        <div class="adv-card"><span class="adv-icon">🔍</span><div class="adv-title">Full Transparency</div><div class="adv-desc">Real-time visibility into every ticket, device health metric, and project status 24/7.</div></div>
+        <div class="adv-card"><span class="adv-icon">📈</span><div class="adv-title">Business-Aligned IT</div><div class="adv-desc">We connect every technology decision to a business outcome — not just technical specs.</div></div>
+        <div class="adv-card"><span class="adv-icon">🛡️</span><div class="adv-title">Security-First Culture</div><div class="adv-desc">Security is embedded in every recommendation and implementation, not bolted on as an afterthought.</div></div>
+        <div class="adv-card"><span class="adv-icon">🌐</span><div class="adv-title">National Reach, Local Feel</div><div class="adv-desc">Local dedicated pods backed by national infrastructure — responsive and fully resourced.</div></div>
+        <div class="adv-card"><span class="adv-icon">📐</span><div class="adv-title">Scalable Solutions</div><div class="adv-desc">Our services grow with you from startup to enterprise without disruptive transitions.</div></div>
+        <div class="adv-card"><span class="adv-icon">🤝</span><div class="adv-title">True Partnership</div><div class="adv-desc">We're invested in your success, not just your contract. Long-term outcomes guide every decision.</div></div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner"><div class="cta-inner"><h2>Experience the BVH Advantage</h2><p>Talk to our team and see how we can give your business the technology edge it deserves.</p><a class="btn-white" onclick="showPage('contact')">Start the Conversation →</a></div></div>
+  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About</a><a onclick="showPage('contact')">Contact</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (800) BVH-TECH</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+</div>
+
+<!-- ════ ABOUT PAGE ════ -->
+<div class="page" id="page-about">
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80')">
+    <div class="page-hero-inner">
+      <span class="section-label" style="color:var(--accent)">About BVH Enterprises</span>
+      <h1>Technology Expertise with<br>a Human Touch</h1>
+      <p>We're a team of passionate technologists and business strategists united by a single mission: to make technology a true competitive advantage for every client we serve.</p>
+    </div>
+  </div>
+  <section style="background:var(--white)">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Built on <em>Trust & Results</em></h2>
+          <p style="font-size:16px;color:var(--gray-600);line-height:1.75;margin-bottom:20px">BVH Enterprises was founded on a simple belief: businesses deserve an IT partner that actually understands their goals and delivers measurable outcomes — not just someone to call when things break.</p>
+          <p style="font-size:16px;color:var(--gray-600);line-height:1.75;margin-bottom:32px">From our founding team's years in enterprise IT consulting, we built BVH around the client experience we wished we'd had — proactive, transparent, and genuinely invested in your success.</p>
+          <div class="values-list">
+            <div class="value-item"><div class="val-dot"></div><div class="val-text"><strong>Client-First Philosophy:</strong> Every decision starts with "how does this benefit our client's business?"</div></div>
+            <div class="value-item"><div class="val-dot"></div><div class="val-text"><strong>Continuous Innovation:</strong> We invest in staying ahead of the technology curve so our clients don't have to.</div></div>
+            <div class="value-item"><div class="val-dot"></div><div class="val-text"><strong>Accountability & Integrity:</strong> We say what we do, do what we say, and stand behind every promise we make.</div></div>
+            <div class="value-item"><div class="val-dot"></div><div class="val-text"><strong>Security by Default:</strong> Cybersecurity is built into everything we design, not bolted on as an afterthought.</div></div>
+          </div>
+        </div>
+        <div>
+          <div style="background:var(--sky);border-radius:20px;padding:40px;margin-bottom:24px">
+            <div style="font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--navy);margin-bottom:12px">Our Mission</div>
+            <p style="font-size:16px;color:var(--gray-600);line-height:1.75">To empower businesses with technology solutions that are strategic, secure, and scalable — delivered by a team that treats every client like our most important one.</p>
+          </div>
+          <div style="background:var(--navy);border-radius:20px;padding:40px">
+            <div style="font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--white);margin-bottom:12px">Our Vision</div>
+            <p style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.75">To be the most trusted technology partner for growing businesses — known for our expertise, our character, and the results we consistently deliver.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner"><div class="cta-inner"><h2>Let's Work Together</h2><p>We'd love to learn about your business and show you what BVH Enterprises can do for your team.</p><a class="btn-white" onclick="showPage('contact')">Get in Touch →</a></div></div>
+  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('why')">Why BVH</a><a onclick="showPage('advantage')">Our Advantage</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (800) BVH-TECH</a><a>✉️ info@bvhenterprises.com</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+</div>
+
+<!-- ════ CONTACT PAGE ════ -->
+<div class="page" id="page-contact">
+  <div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80')">
+    <div class="page-hero-inner">
+      <span class="section-label" style="color:var(--accent)">Contact Us</span>
+      <h1>Let's Start the<br>Conversation</h1>
+      <p>Ready to transform your IT? Fill out the form and a BVH technology consultant will reach out within one business day.</p>
+    </div>
+  </div>
+  <section style="background:var(--gray-50)">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="section-label">Reach Out</span>
+          <h2 class="section-title">We're Here to <em>Help</em></h2>
+          <p class="section-sub">Whether you have a quick question or need a full IT assessment, our team is ready to help.</p>
+          <div class="contact-info">
+            <div class="ci-item"><div class="ci-icon">📞</div><div><div class="ci-label">Phone</div><div class="ci-val">(800) BVH-TECH</div></div></div>
+            <div class="ci-item"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val">info@bvhenterprises.com</div></div></div>
+            <div class="ci-item"><div class="ci-icon">🕐</div><div><div class="ci-label">Support Hours</div><div class="ci-val">24/7 — 365 Days a Year</div></div></div>
+            <div class="ci-item"><div class="ci-icon">📅</div><div><div class="ci-label">Office Hours</div><div class="ci-val">Mon–Fri, 8:00 AM – 6:00 PM</div></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="contact-form" id="contactForm">
+            <div class="form-title">Book a Free IT Strategy Session</div>
+            <div class="form-sub">No obligation. No sales pressure. Just honest insights.</div>
+            <div class="form-row">
+              <div class="form-group"><label>First Name *</label><input type="text" placeholder="John"></div>
+              <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Smith"></div>
+            </div>
+            <div class="form-group"><label>Business Email *</label><input type="email" placeholder="john@company.com"></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(555) 000-0000"></div>
+            <div class="form-group"><label>Company Name *</label><input type="text" placeholder="Acme Corp"></div>
+            <div class="form-row">
+              <div class="form-group"><label>Company Size</label><select><option>Select size...</option><option>1–10</option><option>11–50</option><option>51–200</option><option>201–500</option><option>500+</option></select></div>
+              <div class="form-group"><label>Primary Interest</label><select><option>Select service...</option><option>Managed IT Services</option><option>Cybersecurity</option><option>Cloud Solutions</option><option>IT Strategy / vCIO</option><option>Compliance</option><option>AI & Automation</option></select></div>
+            </div>
+            <div class="form-group"><label>Tell us about your IT challenges</label><textarea placeholder="What's your biggest technology pain point right now?"></textarea></div>
+            <button class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px" onclick="submitForm()">Send My Request →</button>
+          </div>
+          <div class="form-success" id="formSuccess"><div class="check">✅</div><h3>Message Received!</h3><p>A BVH consultant will contact you within one business day to schedule your free strategy session.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a><a onclick="showPage('managed')">Cloud Solutions</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About</a><a onclick="showPage('why')">Why BVH</a><a onclick="showPage('advantage')">Our Advantage</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (800) BVH-TECH</a><a>✉️ info@bvhenterprises.com</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
