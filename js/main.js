@@ -520,3 +520,65 @@ buildIndDots();
   if (video.readyState >= 2) tryPlay();
   else video.addEventListener('loadeddata', tryPlay, { once:true });
 })();
+
+/* ══════════════════════════════════════════════
+   CLICK-TO-COPY — any element with .copyable + data-copy="..."
+   On click: copy to clipboard, show toast, and ALSO let
+   tel:/mailto: links proceed if present.
+   ══════════════════════════════════════════════ */
+(function(){
+  // Create the toast element once
+  let toast = null;
+  function ensureToast(){
+    if (toast) return toast;
+    toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.innerHTML = '<span class="toast-check">✓</span><span class="toast-msg">Copied to clipboard</span>';
+    document.body.appendChild(toast);
+    return toast;
+  }
+  function showToast(text){
+    const t = ensureToast();
+    t.querySelector('.toast-msg').textContent = text;
+    t.classList.add('show');
+    clearTimeout(showToast._timer);
+    showToast._timer = setTimeout(() => t.classList.remove('show'), 1800);
+  }
+
+  function copyText(text){
+    // Modern Clipboard API
+    if (navigator.clipboard && window.isSecureContext){
+      return navigator.clipboard.writeText(text);
+    }
+    // Fallback for older browsers
+    return new Promise((resolve, reject) => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      ta.setAttribute('readonly', '');
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy') ? resolve() : reject();
+      } catch(e){ reject(e); }
+      finally { document.body.removeChild(ta); }
+    });
+  }
+
+  // Delegate click on the document so it works across SPA page switches
+  document.addEventListener('click', function(e){
+    const el = e.target.closest('.copyable');
+    if (!el) return;
+    const text = el.getAttribute('data-copy');
+    if (!text) return;
+
+    copyText(text)
+      .then(() => showToast('Copied: ' + (text.length > 32 ? text.slice(0,32) + '…' : text)))
+      .catch(() => showToast('Copy failed'));
+
+    // Note: we do NOT preventDefault — if the link is tel:/mailto:
+    // the browser/OS will still handle it (calling app, mail client).
+    // If it's just an inert <a> (no href), that's fine — nothing to do.
+  });
+})();
