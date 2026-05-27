@@ -51,7 +51,11 @@ body{font-family:var(--font-b);background:var(--white);color:var(--gray-800);ove
 /* HERO */
 .hero{
   position:relative;min-height:calc(100vh - var(--nav-h));min-height:calc(100dvh - var(--nav-h));
-  overflow:hidden;display:flex;align-items:center;background:var(--navy)
+  overflow:hidden;display:flex;align-items:center;
+  background:
+    linear-gradient(135deg,rgba(10,22,40,.3) 0%,rgba(10,22,40,.5) 100%),
+    url('../assets/video/hero-poster.jpg') center/cover no-repeat,
+    var(--navy)
 }
 .hero-video{
   position:absolute;inset:0;width:100%;height:100%;
@@ -1188,13 +1192,30 @@ section, .container, .feature-list, .stacked-sec{
   .feature-item .fi-title{
     word-wrap:break-word;
     overflow-wrap:break-word;
-    hyphens:auto;
+    hyphens:none;            /* NO mid-word breaks — "People" stays whole */
+    -webkit-hyphens:none;
+    -ms-hyphens:none;
   }
-  /* Hexagon image — was clipping on right edge */
-  .hexagon-wrap, .hexagon-img{
-    max-width:90% !important;
-    margin-left:auto;
-    margin-right:auto;
+  /* ── HEXAGON: force small + centered on tablet/mobile ── */
+  .stacked-inner{
+    text-align:center !important;
+  }
+  .hexagon-wrap{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 auto !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding:0 !important;
+  }
+  .hexagon-img{
+    width:280px !important;
+    height:280px !important;
+    max-width:70vw !important;
+    max-height:70vw !important;
+    margin:0 auto !important;
+    flex:0 0 auto !important;
   }
   /* Stats: ensure they don't overflow */
   .hss-inner, .results-stats, .why-metrics{
@@ -1251,11 +1272,20 @@ section, .container, .feature-list, .stacked-sec{
     left:50%; transform:translateX(-50%);
   }
 
-  /* Hexagon: shrink and center fully */
+  /* Hexagon: smaller on phones, fully centered */
   .hexagon-wrap{
-    transform:scale(.85);
-    transform-origin:center;
-    margin:0 auto;
+    width:100% !important;
+    margin:0 auto !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+  }
+  .hexagon-img{
+    width:240px !important;
+    height:240px !important;
+    max-width:65vw !important;
+    max-height:65vw !important;
+    margin:0 auto !important;
   }
 }
 
