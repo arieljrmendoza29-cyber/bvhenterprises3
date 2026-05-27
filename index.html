@@ -46,7 +46,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="hero-tag">Your Strategic IT Partner</div>
+        <div class="hero-tag hero-tag-pill"><span class="dot"></span>EST. JANUARY 2020 · RICHMOND, VA</div>
         <h1>Managed IT Services <em>Built Around</em> Your Business</h1>
         <p class="hero-sub">BVH Enterprises delivers enterprise-grade technology consulting, managed IT, and cybersecurity solutions that drive growth, reduce risk, and keep your team productive 24/7.</p>
         <div class="hero-btns">
@@ -54,6 +54,11 @@
           <a class="btn-outline-white" onclick="showPage('managed')">Our Clients Said It Best →</a>
         </div>
         <div class="hero-explore">Explore how BVH transforms IT into a growth engine</div>
+        <div class="hero-naics">
+          <span class="naics-icon" aria-hidden="true">🛡️</span>
+          <span class="naics-label">NAICS Code:</span>
+          <span class="naics-value">541512 — Computer Systems Design Services</span>
+        </div>
       </div>
       <div class="hero-right">
         <div class="hero-img-wrap">
@@ -329,12 +334,52 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
-      <div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner delivering managed services, cybersecurity, and cloud solutions that power business growth.</p></div>
-      <div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT Services</a><a onclick="showPage('managed')">Cybersecurity</a><a onclick="showPage('managed')">Cloud Solutions</a><a onclick="showPage('managed')">IT Consulting</a><a onclick="showPage('managed')">AI & Automation</a></div>
-      <div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About Us</a><a onclick="showPage('why')">Why BVH</a><a onclick="showPage('advantage')">Our Advantage</a><a onclick="showPage('contact')">Contact</a></div>
-      <div class="footer-col"><h4>Contact</h4><a>📞 (804) 847-4307</a><a>✉️ contact@bvhenterprises.com</a><a>📍 United States</a><a>🕐 24/7 Support</a></div>
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <svg width="80" height="30" viewBox="0 0 200 60">
+            <text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text>
+            <text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text>
+            <text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text>
+          </svg>
+        </div>
+        <p class="footer-tagline">Your strategic IT partner delivering managed services, cybersecurity, and cloud solutions that power business growth.</p>
+        <div class="footer-naics">
+          <span aria-hidden="true">🛡️</span>
+          <span>NAICS <strong>541512</strong> — Computer Systems Design Services</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="showPage('managed')">Managed IT Services</a>
+        <a onclick="showPage('managed')">Cybersecurity</a>
+        <a onclick="showPage('managed')">Cloud Solutions</a>
+        <a onclick="showPage('managed')">IT Consulting</a>
+        <a onclick="showPage('managed')">AI &amp; Automation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('why')">Why BVH</a>
+        <a onclick="showPage('advantage')">Our Advantage</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+
+      <div class="footer-col footer-contact-col">
+        <h4>Contact</h4>
+        <a class="copyable" href="tel:+18048474307" data-copy="(804) 847-4307" title="Click to copy"><span class="fc-ico">📞</span><span>(804) 847-4307</span></a>
+        <a class="copyable" data-copy="(804) 847-4281" title="Click to copy"><span class="fc-ico">📠</span><span>(804) 847-4281 <em>(Fax)</em></span></a>
+        <a class="copyable" href="mailto:contact@bvhenterprises.com" data-copy="contact@bvhenterprises.com" title="Click to copy"><span class="fc-ico">✉️</span><span>contact@bvhenterprises.com</span></a>
+        <a class="copyable" data-copy="919 E Main Street Ste 1604-ITB, Richmond, VA 23219" title="Click to copy"><span class="fc-ico">📍</span><span>919 E Main Street, Ste 1604-ITB<br>Richmond, VA 23219</span></a>
+        <a><span class="fc-ico">🕐</span><span>24/7 Support</span></a>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span><span>Privacy Policy · Terms of Service</span></div>
+
+    <div class="footer-bottom">
+      <span>© 2025 BVH Enterprises LLC. All rights reserved.</span>
+      <span class="footer-legal"><a>Privacy Policy</a> · <a>Terms of Service</a></span>
+    </div>
   </footer>
 </div>
 
@@ -360,7 +405,55 @@
     </div>
   </section>
   <div class="cta-banner"><div class="cta-inner"><h2>Ready to Get Started?</h2><p>Let's build a customized IT plan tailored to your industry and business goals.</p><a class="btn-white" onclick="showPage('contact')">Schedule a Free Consultation →</a></div></div>
-  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a><a onclick="showPage('managed')">Cloud Solutions</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About</a><a onclick="showPage('why')">Why BVH</a><a onclick="showPage('contact')">Contact</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (804) 847-4307</a><a>✉️ contact@bvhenterprises.com</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <svg width="80" height="30" viewBox="0 0 200 60">
+            <text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text>
+            <text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text>
+            <text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text>
+          </svg>
+        </div>
+        <p class="footer-tagline">Your strategic IT partner delivering managed services, cybersecurity, and cloud solutions that power business growth.</p>
+        <div class="footer-naics">
+          <span aria-hidden="true">🛡️</span>
+          <span>NAICS <strong>541512</strong> — Computer Systems Design Services</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="showPage('managed')">Managed IT Services</a>
+        <a onclick="showPage('managed')">Cybersecurity</a>
+        <a onclick="showPage('managed')">Cloud Solutions</a>
+        <a onclick="showPage('managed')">IT Consulting</a>
+        <a onclick="showPage('managed')">AI &amp; Automation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('why')">Why BVH</a>
+        <a onclick="showPage('advantage')">Our Advantage</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+
+      <div class="footer-col footer-contact-col">
+        <h4>Contact</h4>
+        <a class="copyable" href="tel:+18048474307" data-copy="(804) 847-4307" title="Click to copy"><span class="fc-ico">📞</span><span>(804) 847-4307</span></a>
+        <a class="copyable" data-copy="(804) 847-4281" title="Click to copy"><span class="fc-ico">📠</span><span>(804) 847-4281 <em>(Fax)</em></span></a>
+        <a class="copyable" href="mailto:contact@bvhenterprises.com" data-copy="contact@bvhenterprises.com" title="Click to copy"><span class="fc-ico">✉️</span><span>contact@bvhenterprises.com</span></a>
+        <a class="copyable" data-copy="919 E Main Street Ste 1604-ITB, Richmond, VA 23219" title="Click to copy"><span class="fc-ico">📍</span><span>919 E Main Street, Ste 1604-ITB<br>Richmond, VA 23219</span></a>
+        <a><span class="fc-ico">🕐</span><span>24/7 Support</span></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 BVH Enterprises LLC. All rights reserved.</span>
+      <span class="footer-legal"><a>Privacy Policy</a> · <a>Terms of Service</a></span>
+    </div>
+  </footer>
 </div>
 
 <!-- ════ WHY BVH PAGE ════ -->
@@ -396,7 +489,55 @@
     </div>
   </section>
   <div class="cta-banner"><div class="cta-inner"><h2>See the BVH Difference</h2><p>Book a complimentary IT assessment and discover what's holding your technology back.</p><a class="btn-white" onclick="showPage('contact')">Get My Free IT Assessment →</a></div></div>
-  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About</a><a onclick="showPage('contact')">Contact</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (804) 847-4307</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <svg width="80" height="30" viewBox="0 0 200 60">
+            <text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text>
+            <text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text>
+            <text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text>
+          </svg>
+        </div>
+        <p class="footer-tagline">Your strategic IT partner delivering managed services, cybersecurity, and cloud solutions that power business growth.</p>
+        <div class="footer-naics">
+          <span aria-hidden="true">🛡️</span>
+          <span>NAICS <strong>541512</strong> — Computer Systems Design Services</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="showPage('managed')">Managed IT Services</a>
+        <a onclick="showPage('managed')">Cybersecurity</a>
+        <a onclick="showPage('managed')">Cloud Solutions</a>
+        <a onclick="showPage('managed')">IT Consulting</a>
+        <a onclick="showPage('managed')">AI &amp; Automation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('why')">Why BVH</a>
+        <a onclick="showPage('advantage')">Our Advantage</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+
+      <div class="footer-col footer-contact-col">
+        <h4>Contact</h4>
+        <a class="copyable" href="tel:+18048474307" data-copy="(804) 847-4307" title="Click to copy"><span class="fc-ico">📞</span><span>(804) 847-4307</span></a>
+        <a class="copyable" data-copy="(804) 847-4281" title="Click to copy"><span class="fc-ico">📠</span><span>(804) 847-4281 <em>(Fax)</em></span></a>
+        <a class="copyable" href="mailto:contact@bvhenterprises.com" data-copy="contact@bvhenterprises.com" title="Click to copy"><span class="fc-ico">✉️</span><span>contact@bvhenterprises.com</span></a>
+        <a class="copyable" data-copy="919 E Main Street Ste 1604-ITB, Richmond, VA 23219" title="Click to copy"><span class="fc-ico">📍</span><span>919 E Main Street, Ste 1604-ITB<br>Richmond, VA 23219</span></a>
+        <a><span class="fc-ico">🕐</span><span>24/7 Support</span></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 BVH Enterprises LLC. All rights reserved.</span>
+      <span class="footer-legal"><a>Privacy Policy</a> · <a>Terms of Service</a></span>
+    </div>
+  </footer>
 </div>
 
 <!-- ════ OUR ADVANTAGE PAGE ════ -->
@@ -425,7 +566,55 @@
     </div>
   </section>
   <div class="cta-banner"><div class="cta-inner"><h2>Experience the BVH Advantage</h2><p>Talk to our team and see how we can give your business the technology edge it deserves.</p><a class="btn-white" onclick="showPage('contact')">Start the Conversation →</a></div></div>
-  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About</a><a onclick="showPage('contact')">Contact</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (804) 847-4307</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <svg width="80" height="30" viewBox="0 0 200 60">
+            <text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text>
+            <text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text>
+            <text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text>
+          </svg>
+        </div>
+        <p class="footer-tagline">Your strategic IT partner delivering managed services, cybersecurity, and cloud solutions that power business growth.</p>
+        <div class="footer-naics">
+          <span aria-hidden="true">🛡️</span>
+          <span>NAICS <strong>541512</strong> — Computer Systems Design Services</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="showPage('managed')">Managed IT Services</a>
+        <a onclick="showPage('managed')">Cybersecurity</a>
+        <a onclick="showPage('managed')">Cloud Solutions</a>
+        <a onclick="showPage('managed')">IT Consulting</a>
+        <a onclick="showPage('managed')">AI &amp; Automation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('why')">Why BVH</a>
+        <a onclick="showPage('advantage')">Our Advantage</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+
+      <div class="footer-col footer-contact-col">
+        <h4>Contact</h4>
+        <a class="copyable" href="tel:+18048474307" data-copy="(804) 847-4307" title="Click to copy"><span class="fc-ico">📞</span><span>(804) 847-4307</span></a>
+        <a class="copyable" data-copy="(804) 847-4281" title="Click to copy"><span class="fc-ico">📠</span><span>(804) 847-4281 <em>(Fax)</em></span></a>
+        <a class="copyable" href="mailto:contact@bvhenterprises.com" data-copy="contact@bvhenterprises.com" title="Click to copy"><span class="fc-ico">✉️</span><span>contact@bvhenterprises.com</span></a>
+        <a class="copyable" data-copy="919 E Main Street Ste 1604-ITB, Richmond, VA 23219" title="Click to copy"><span class="fc-ico">📍</span><span>919 E Main Street, Ste 1604-ITB<br>Richmond, VA 23219</span></a>
+        <a><span class="fc-ico">🕐</span><span>24/7 Support</span></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 BVH Enterprises LLC. All rights reserved.</span>
+      <span class="footer-legal"><a>Privacy Policy</a> · <a>Terms of Service</a></span>
+    </div>
+  </footer>
 </div>
 
 <!-- ════ ABOUT PAGE ════ -->
@@ -466,7 +655,55 @@
     </div>
   </section>
   <div class="cta-banner"><div class="cta-inner"><h2>Let's Work Together</h2><p>We'd love to learn about your business and show you what BVH Enterprises can do for your team.</p><a class="btn-white" onclick="showPage('contact')">Get in Touch →</a></div></div>
-  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('why')">Why BVH</a><a onclick="showPage('advantage')">Our Advantage</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (804) 847-4307</a><a>✉️ contact@bvhenterprises.com</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <svg width="80" height="30" viewBox="0 0 200 60">
+            <text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text>
+            <text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text>
+            <text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text>
+          </svg>
+        </div>
+        <p class="footer-tagline">Your strategic IT partner delivering managed services, cybersecurity, and cloud solutions that power business growth.</p>
+        <div class="footer-naics">
+          <span aria-hidden="true">🛡️</span>
+          <span>NAICS <strong>541512</strong> — Computer Systems Design Services</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="showPage('managed')">Managed IT Services</a>
+        <a onclick="showPage('managed')">Cybersecurity</a>
+        <a onclick="showPage('managed')">Cloud Solutions</a>
+        <a onclick="showPage('managed')">IT Consulting</a>
+        <a onclick="showPage('managed')">AI &amp; Automation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('why')">Why BVH</a>
+        <a onclick="showPage('advantage')">Our Advantage</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+
+      <div class="footer-col footer-contact-col">
+        <h4>Contact</h4>
+        <a class="copyable" href="tel:+18048474307" data-copy="(804) 847-4307" title="Click to copy"><span class="fc-ico">📞</span><span>(804) 847-4307</span></a>
+        <a class="copyable" data-copy="(804) 847-4281" title="Click to copy"><span class="fc-ico">📠</span><span>(804) 847-4281 <em>(Fax)</em></span></a>
+        <a class="copyable" href="mailto:contact@bvhenterprises.com" data-copy="contact@bvhenterprises.com" title="Click to copy"><span class="fc-ico">✉️</span><span>contact@bvhenterprises.com</span></a>
+        <a class="copyable" data-copy="919 E Main Street Ste 1604-ITB, Richmond, VA 23219" title="Click to copy"><span class="fc-ico">📍</span><span>919 E Main Street, Ste 1604-ITB<br>Richmond, VA 23219</span></a>
+        <a><span class="fc-ico">🕐</span><span>24/7 Support</span></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 BVH Enterprises LLC. All rights reserved.</span>
+      <span class="footer-legal"><a>Privacy Policy</a> · <a>Terms of Service</a></span>
+    </div>
+  </footer>
 </div>
 
 <!-- ════ CONTACT PAGE ════ -->
@@ -535,7 +772,55 @@
       </div>
     </div>
   </section>
-  <footer><div class="footer-grid"><div><div class="footer-logo-wrap"><svg width="80" height="30" viewBox="0 0 200 60"><text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text><text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text><text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text></svg></div><p class="footer-tagline">Your strategic IT partner.</p></div><div class="footer-col"><h4>Services</h4><a onclick="showPage('managed')">Managed IT</a><a onclick="showPage('managed')">Cybersecurity</a><a onclick="showPage('managed')">Cloud Solutions</a></div><div class="footer-col"><h4>Company</h4><a onclick="showPage('about')">About</a><a onclick="showPage('why')">Why BVH</a><a onclick="showPage('advantage')">Our Advantage</a></div><div class="footer-col"><h4>Contact</h4><a>📞 (804) 847-4307</a><a>✉️ contact@bvhenterprises.com</a></div></div><div class="footer-bottom"><span>© 2025 BVH Enterprises LLC. All rights reserved.</span></div></footer>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <svg width="80" height="30" viewBox="0 0 200 60">
+            <text x="0" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">B</text>
+            <text x="36" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#3B82F6">V</text>
+            <text x="74" y="46" font-family="Arial Black,sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">H</text>
+          </svg>
+        </div>
+        <p class="footer-tagline">Your strategic IT partner delivering managed services, cybersecurity, and cloud solutions that power business growth.</p>
+        <div class="footer-naics">
+          <span aria-hidden="true">🛡️</span>
+          <span>NAICS <strong>541512</strong> — Computer Systems Design Services</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="showPage('managed')">Managed IT Services</a>
+        <a onclick="showPage('managed')">Cybersecurity</a>
+        <a onclick="showPage('managed')">Cloud Solutions</a>
+        <a onclick="showPage('managed')">IT Consulting</a>
+        <a onclick="showPage('managed')">AI &amp; Automation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('why')">Why BVH</a>
+        <a onclick="showPage('advantage')">Our Advantage</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+
+      <div class="footer-col footer-contact-col">
+        <h4>Contact</h4>
+        <a class="copyable" href="tel:+18048474307" data-copy="(804) 847-4307" title="Click to copy"><span class="fc-ico">📞</span><span>(804) 847-4307</span></a>
+        <a class="copyable" data-copy="(804) 847-4281" title="Click to copy"><span class="fc-ico">📠</span><span>(804) 847-4281 <em>(Fax)</em></span></a>
+        <a class="copyable" href="mailto:contact@bvhenterprises.com" data-copy="contact@bvhenterprises.com" title="Click to copy"><span class="fc-ico">✉️</span><span>contact@bvhenterprises.com</span></a>
+        <a class="copyable" data-copy="919 E Main Street Ste 1604-ITB, Richmond, VA 23219" title="Click to copy"><span class="fc-ico">📍</span><span>919 E Main Street, Ste 1604-ITB<br>Richmond, VA 23219</span></a>
+        <a><span class="fc-ico">🕐</span><span>24/7 Support</span></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 BVH Enterprises LLC. All rights reserved.</span>
+      <span class="footer-legal"><a>Privacy Policy</a> · <a>Terms of Service</a></span>
+    </div>
+  </footer>
 </div>
 
 
