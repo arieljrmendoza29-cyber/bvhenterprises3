@@ -52,21 +52,10 @@ body{font-family:var(--font-b);background:var(--white);color:var(--gray-800);ove
 .hero{
   position:relative;min-height:calc(100vh - var(--nav-h));min-height:calc(100dvh - var(--nav-h));
   overflow:hidden;display:flex;align-items:center;
-  background:
-    linear-gradient(135deg,rgba(10,22,40,.3) 0%,rgba(10,22,40,.5) 100%),
-    url('../assets/video/hero-poster.jpg') center/cover no-repeat,
-    var(--navy)
+  background:linear-gradient(135deg,#0d1b3e 0%,#1a3a6b 40%,#1a56db 100%)
 }
-.hero-video{
-  position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;z-index:0;opacity:1
-}
-.hero-overlay{
-  position:absolute;inset:0;z-index:1;
-  background:
-    linear-gradient(90deg, rgba(10,22,40,.55) 0%, rgba(10,22,40,.30) 50%, rgba(10,22,40,.15) 100%),
-    linear-gradient(180deg, rgba(10,22,40,.25) 0%, rgba(10,22,40,0) 30%, rgba(10,22,40,0) 70%, rgba(10,22,40,.25) 100%);
-}
+.hero-video{display:none}
+.hero-overlay{display:none}
 .hero-inner{
   position:relative;z-index:2;max-width:1280px;margin:0 auto;
   padding:80px 48px;width:100%;
@@ -88,7 +77,7 @@ body{font-family:var(--font-b);background:var(--white);color:var(--gray-800);ove
 }
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero-sub{
-  font-size:18px;line-height:1.72;color:rgba(255,255,255,.68);
+  font-size:18px;line-height:1.72;color:rgba(255,255,255,.88);
   margin-bottom:36px;max-width:500px
 }
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
@@ -109,7 +98,7 @@ body{font-family:var(--font-b);background:var(--white);color:var(--gray-800);ove
 }
 .btn-outline-white:hover{border-color:var(--white);background:rgba(255,255,255,.08);transform:translateY(-2px)}
 .hero-explore{
-  display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.45);
+  display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);
   font-size:13px;font-weight:500;letter-spacing:.3px
 }
 .hero-explore::before{content:'↓';font-size:16px}
@@ -685,12 +674,8 @@ html, body{
 /* Smooth momentum scrolling on iOS */
 body{ -webkit-overflow-scrolling:touch; }
 
-/* Hero video — cover behavior consistent across iOS Safari */
-.hero-video{
-  width:100%; height:100%;
-  object-fit:cover;
-  -webkit-transform:translateZ(0);   /* Promote to compositor for smooth playback */
-}
+/* Hero video removed — using solid blue gradient background */
+.hero-video{ display:none; }
 
 /* (removed: prefers-reduced-data rule that hid the hero video,
    since it triggered too often on mobile data connections) */
@@ -1082,7 +1067,7 @@ body{ -webkit-overflow-scrolling:touch; }
   background:rgba(255,255,255,.06);
   border:1px solid rgba(255,255,255,.12);
   border-radius:10px;
-  color:rgba(255,255,255,.85);
+  color:rgba(255,255,255,.75);
   font-size:13px;
   backdrop-filter:blur(8px);
   -webkit-backdrop-filter:blur(8px);
